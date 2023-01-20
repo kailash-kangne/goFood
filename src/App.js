@@ -9,11 +9,13 @@ import {
 } from "react-router-dom";
 import Login from './screens/Login';
 import Signup from './screens/Signup';
+import { CartProvider } from './components/ContextReducer';
 // import '../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
 // import '../node_modules/bootstrap-dark-5/dist/css/bootstrap-dark.min.css';
 
 function App() {
   return (
+    <CartProvider>
     <Router>
       <div>
         <Routes>
@@ -24,6 +26,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </CartProvider>
   );
 }
 
